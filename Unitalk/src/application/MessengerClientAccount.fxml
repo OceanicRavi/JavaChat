@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox id="vBoxAccount" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="620.0" style="-fx-background-color: #adebad;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buttonAccountController">
+   <children>
+      <HBox id="hBoxLogin" prefHeight="37.0" prefWidth="601.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Server IP Address (Default to localhost):">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <TextField id="textFieldServerIP" prefHeight="37.0" prefWidth="282.0" promptText="Provide server IP if not the 'localhost'">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Accordion prefHeight="270.0" prefWidth="618.0">
+        <panes>
+          <TitledPane animated="false" text="Sign Up" textFill="#06330b">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #adebad;">
+                     <children>
+                        <VBox layoutX="86.0" layoutY="4.0" prefHeight="167.0" prefWidth="455.0">
+                           <children>
+                              <TextField id="textFieldNewUserName" promptText="Type new user name">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="textFieldNewPassword" promptText="Type new password">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button id="buttonSignUp" mnemonicParsing="false" onAction="#buttonSignUpAction" prefHeight="29.0" prefWidth="134.0" style="-fx-background-color: #46d246;" text="Sign Up" textAlignment="CENTER" textFill="#06330b">
+                                 <VBox.margin>
+                                    <Insets left="170.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" expanded="false" text="Login" textFill="#06350b">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="187.0" prefWidth="618.0" style="-fx-background-color: #adebad;">
+                     <children>
+                        <VBox layoutX="87.0" layoutY="14.0" prefHeight="153.0" prefWidth="455.0">
+                           <children>
+                              <TextField id="textFieldUsername" promptText="Username">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="textFieldPassword" promptText="Password">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button id="buttonLogin" mnemonicParsing="false" onAction="#buttonLoginAction" prefHeight="29.0" prefWidth="132.0" style="-fx-background-color: #46d246;" text="Login" textFill="#06350b">
+                                 <VBox.margin>
+                                    <Insets left="170.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" height="37.31" radius="16.302500000000002" spread="0.15" width="29.9" />
+   </effect>
+</VBox>
